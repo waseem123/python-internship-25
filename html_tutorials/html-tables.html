@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        table{
+            width: 100%;
+        }
+        td{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,12 +53,11 @@
             <tr>
                 <td>4</td>
                 <td>Sam</td>
-                <td>Pune</td>
+                <td rowspan="2">Solapur</td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Falak</td>
-                <td>Solapur</td>
             </tr>
 
             <tr>
@@ -53,7 +68,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td>Total 6 Students</td>
+                <td colspan="3">Total 6 Students</td>
             </tr>
         </tfoot>
     </table>
