@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main::first-letter {
+            font-size: 48px;
+        }
+
+        #second::first-line{
+            color: rgb(7, 174, 23);
+        }
+
+        #second::before{
+            content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIIeBXsSvolJ6evcf2dn_ECPpi1XE70bsk7g&s');
+        }
+
+        #second::after{
+            content: url('https://images.all-free-download.com/images/thumbjpg/caret_square_down_arrow_sign_icon_6919192.jpg');
+        }
+
+        ::marker{
+            color: red;
+        }
+
+        ::selection{
+            background-color: rgb(31, 113, 86);
+            color: rgb(177, 172, 172);
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        selector::pseudo_element_name{
+            property1 : value;
+            property2 : value;
+            property3 : value;
+            ...
+            propertyN : value;
+        }
+    </pre>
+    <p id="main">
+        In ancient India, there was a prosperous kingdom known for its skilled craftsmen, scholars, and traders. The
+        kingdom was ruled by a wise king named Aryavardhan.
+        His kingdom was famous for producing the finest swords in the region. Warriors and neighboring kingdoms would
+        travel long distances to buy these swords because they were strong, sharp, and reliable.
+        For many years, the kingdom flourished.
+    </p>
+
+    <p id="second">
+        One day, a new kingdom opened nearby.
+
+        This new kingdom started selling swords at half the price.
+
+        Their swords were cheaper, but of lower quality.
+
+        Soon, traders began going to the cheaper kingdom.
+
+        Sales dropped.
+
+        Revenue decreased.
+
+        Ministers became worried.
+
+        They went to the king and said:
+    </p>
+
+
+    <ol>
+        <li>Watch</li>
+        <li>Computer</li>
+        <li>Charger</li>
+        <li>Bottle</li>
+    </ol>
+</body>
+
+</html>

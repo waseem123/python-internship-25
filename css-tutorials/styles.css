@@ -1,0 +1,13 @@
+h1{
+    color: rgb(51, 107, 88);
+}
+
+h2{
+    color: brown;
+    background-color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: black;
+}
