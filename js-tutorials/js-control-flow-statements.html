@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let x = prompt("ENTER A NUMBER")
+        if (x % 2 == 0) {
+            document.write(`<h1>${x} IS <span style="color:green">EVEN</span> NUMBER</h1>`)
+        } else {
+            document.write(`<h1 style="color:magenta">${x} IS <span style="color:red">ODD</span> NUMBER</h1>`)
+        }
+
+        document.write("<ol>")
+        document.write("<li>HI</li>")
+        document.write("<li>HI</li>")
+        document.write("<li>HI</li>")
+        document.write("<li>HI</li>")
+        document.write("</ol>")
+    </script>
+
+    <script>
+        let arr = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+        document.write('<ol style="color:blue">')
+        for (let i = 0; i < arr.length; i++) {
+            document.write(`<li>${arr[i]}</li>`)
+        }
+        document.write('</ol>')
+    </script>
+</body>
+
+</html>
