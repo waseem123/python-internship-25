@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="myheading">HTML DOM</h1>
+    <p id="myparagraph">
+        DOM - stands for Document Object Model
+    </p>
+    <div>
+        <input id="myinput" type="text" value="1000">
+    </div>
+</body>
+<script>
+    let heading = document.getElementById('myheading')
+    let paragraph = document.getElementById('myparagraph')
+
+    console.log(heading)
+    document.write(heading)
+
+    console.log(paragraph)
+    document.write(paragraph)
+
+    console.log(heading.innerHTML)
+    console.log(paragraph.innerHTML)
+
+    console.log(heading.innerText)
+    console.log(paragraph.innerText)
+
+    let input = document.getElementById('myinput')
+    console.log(input.value)
+</script>
+
+</html>

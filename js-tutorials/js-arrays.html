@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [100, 200, 300, 400]
+    console.log(arr)
+    document.write(arr)
+    console.log(arr[3])
+
+    let r = arr.push(500)
+    console.log(arr)
+    console.log(r)
+
+    arr.push(600, 700, 800)
+    console.log(arr)
+
+    r = arr.pop()
+    console.log(arr)
+    console.log(r)
+
+    r = arr.shift()
+    console.log(arr)
+    console.log(r)
+
+    arr.unshift(2, 4, 6, 8, 10, 12)
+    console.log(arr)
+
+    arr[2] = 6000
+    console.log(arr)
+
+    arr[100] = 6666
+    console.log(arr)
+
+    let x = arr.slice(5, 9)
+    console.log(x)
+    console.log(arr)
+
+    arr.splice(0, 3)
+    console.log(arr)
+
+
+</script>
+
+<script>
+    let myarr = ['Solapur', 'Mumbai', 'Pune', 'Chennai', 'Kolkata', 'Bengaluru']
+    myarr.forEach(city => {
+        console.log(city)
+    });
+
+    document.write("<ol>")
+    myarr.forEach(city => {
+        document.write(`<li>${city}</li>`)
+    });
+    document.write("</ol>")
+
+</script>
+
+</html>

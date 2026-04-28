@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<script>
+    let employees = [
+        { empId: 101, empName: 'Alice', empSalary: 55000, empDesignation: 'DevOps Engineer' },
+        { empId: 102, empName: 'Bob', empSalary: 62000, empDesignation: 'Software Developer' },
+        { empId: 103, empName: 'Charlie', empSalary: 48000, empDesignation: 'QA Analyst' },
+        { empId: 104, empName: 'Diana', empSalary: 75000, empDesignation: 'Solutions Architect' },
+        { empId: 105, empName: 'Ethan', empSalary: 52000, empDesignation: 'System Administrator' },
+        { empId: 106, empName: 'Fiona', empSalary: 68000, empDesignation: 'Data Scientist' }
+    ]
+
+    document.write(`<table>`)
+    document.write(`<thead>`)
+    document.write(`<tr>`)
+    document.write(`<th>EMPLOYEE ID</th>`)
+    document.write(`<th>NAME</th>`)
+    document.write(`<th>SALARY</th>`)
+    document.write(`<th>DESIGNATION</th>`)
+    document.write(`</tr>`)
+    document.write(`</thead>`)
+    document.write(`<tbody>`)
+        
+    employees.forEach(emp => {
+        document.write(`<tr>`)
+        document.write(`<td>${emp.empId}</td>`)
+        document.write(`<td>${emp.empName}</td>`)
+        document.write(`<td>${emp.empSalary}</td>`)
+        document.write(`<td>${emp.empDesignation}</td>`)
+        document.write(`</tr>`)
+    });
+
+    document.write(`</tbody>`)
+    document.write(`</table>`)
+</script>
+
+</html>

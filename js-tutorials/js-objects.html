@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let x = { num1: 1000, num2: 2000 }
+    console.log(x)
+    document.write(x)
+    document.write(`<p>${x['num1']}</p>`)
+    document.write(`<p>${x['num2']}</p>`)
+    document.write(`<p></p>`)
+    document.write(`<p>${x.num1}</p>`)
+    document.write(`<p>${x.num2}</p>`)
+</script>
+
+<script>
+    let student1 = { name: "Alex", class: "CSE - SY", rollno: 101, marks: 88 }
+    let student2 = { name: "Priya", class: "CSE - SY", rollno: 102, marks: 92 };
+    let student3 = { name: "Liam", class: "CSE - SY", rollno: 103, marks: 75 };
+    let student4 = { name: "Ananya", class: "CSE - SY", rollno: 104, marks: 84 };
+    let student5 = { name: "Rohan", class: "CSE - SY", rollno: 105, marks: 91 };
+    let student6 = { name: "Sofia", class: "CSE - SY", rollno: 106, marks: 79 };
+
+
+    document.write(`<div>`)
+    document.write(`<div>ROLL NO - ${student1.rollno}</div>`)
+    document.write(`<div>NAME    - ${student1.name}</div>`)
+    document.write(`<div>CLASS   - ${student1.class}</div>`)
+    document.write(`<div>MARKS   - ${student1.marks}</div>`)
+    document.write(`<hr>`)
+    document.write(`</div>`)
+
+    let students = [student1, student2, student3, student4, student5, student6]
+    for (let i = 0; i < students.length; i++) {
+        document.write(`<div>`)
+        document.write(`<div>ROLL NO - ${students[i].rollno}</div>`)
+        document.write(`<div>NAME    - ${students[i].name}</div>`)
+        document.write(`<div>CLASS   - ${students[i].class}</div>`)
+        document.write(`<div>MARKS   - ${students[i].marks}</div>`)
+        document.write(`<hr>`)
+        document.write(`</div>`)
+    }
+</script>
+
+<script>
+
+    students.forEach(s => {
+        document.write(`<div>`)
+        document.write(`<div>ROLL NO - ${s.rollno}</div>`)
+        document.write(`<div>NAME    - ${s.name}</div>`)
+        document.write(`<div>CLASS   - ${s.class}</div>`)
+        document.write(`<div>MARKS   - ${s.marks}</div>`)
+        document.write(`----------------------------------------`)
+        document.write(`</div>`)
+    });
+</script>
+
+</html>
