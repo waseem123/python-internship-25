@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="d1" style="background-color: cadetblue;">This is a sample text</div>
+    <div id="d2" style="background-color: chocolate;">
+        <h1>Demo</h1>
+        <p>This a demo text</p>
+    </div>
+    <input type="text" id="mytodo">
+    <button onclick="addToDo()">Add</button>
+    <hr>
+    <ol id="mytodolist"></ol>
+    
+</body>
+<script>
+    let d1 = document.querySelector('#d1')
+    let d2 = document.querySelector('#d2')
+    console.log(d1.innerHTML)
+    console.log(d1.innerText)
+
+    console.log(d2.innerHTML)
+    console.log(d2.innerText)
+
+    d1.innerHTML = `<h2>This is an inner Paragraph</h2>`
+</script>
+
+<script>
+    let tasks = ""
+    function addToDo() {
+        let mytodo = document.getElementById('mytodo').value
+        if (mytodo == "" || mytodo.length == 0) {
+            alert("Task input cannot be empty")
+        } else {
+            let mytodolist = document.getElementById('mytodolist')
+            tasks += "<li>" + mytodo + "</li>"
+            mytodolist.innerHTML = tasks
+            document.getElementById('mytodo').value = ""
+        }
+    }
+</script>
+
+</html>
