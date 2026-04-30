@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 8px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        th {
+            text-align: start;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <table>
+            <tr>
+                <th><label for="">Name</label></th>
+                <td>
+                    <input type="text" placeholder="Enter your name" id="pname">
+                </td>
+
+            </tr>
+
+            <tr>
+                <th><label for="">City</label></th>
+                <td>
+                    <select id="pcity">
+                        <option value="Solapur">Solapur</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th><label for="">College</label></th>
+                <td>
+                    <input type="text" placeholder="Enter your College" id="pcollege">
+                </td>
+            </tr>
+
+            <tr>
+                <th><label for="">Qualification</label></th>
+                <td>
+                    <input type="text" placeholder="Enter your qualification" id="pqualification">
+                </td>
+            </tr>
+
+            <tr>
+                <th><label for="">Branch</label></th>
+                <td>
+                    <input type="text" placeholder="Enter your branch of study" id="pbranch">
+
+                </td>
+            </tr>
+        </table>
+        <button onclick="showData()" style="float: right; border: none; padding: 8px;">Show</button>
+    </div>
+
+    <hr>
+    <div id="output"></div>
+
+</body>
+<script>
+    function showData(){
+        let pname = document.querySelector('#pname')
+        let pcity = document.querySelector('#pcity')
+        let pcollege = document.querySelector('#pcollege')
+        let pqualification = document.querySelector('#pqualification')
+        let pbranch = document.querySelector('#pbranch')
+        let output = document.querySelector('#output')
+        
+        let myoutput = `My name is ${pname.value}. I live in ${pcity.value}. I am pursuing my ${pqualification.value} in ${pbranch.value} from ${pcollege.value}.`
+        output.innerHTML = myoutput
+    }
+</script>
+
+</html>
