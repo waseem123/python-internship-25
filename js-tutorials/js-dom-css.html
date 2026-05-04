@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="d1">
+        <h1 id="h1">DOM CSS</h1>
+        <p id="p1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet itaque explicabo minima fugiat, maxime,
+            alias non ea perspiciatis excepturi nemo quisquam culpa est iusto suscipit exercitationem quod commodi
+            magni? Repellendus!
+        </p>
+        <pre>
+            Syntax - 
+            selector.style.property = VALUE;
+        </pre>
+    </div>
+    <button id="btn_add">Add CSS</button>
+    <button id="btn_remove">Remove CSS</button>
+    <button id="btn_toggle">Toggle CSS</button>
+</body>
+<script>
+    let d1 = document.querySelector('#d1')
+    let btn_add = document.querySelector('#btn_add')
+    let btn_remove = document.querySelector('#btn_remove')
+    let btn_toggle = document.querySelector('#btn_toggle')
+    let isCSS = false
+
+    btn_add.addEventListener('click', () => {
+        d1.style.backgroundColor = "red"
+        d1.style.color = "white"
+        d1.style.padding = "8px"
+        d1.style.margin = "8px"
+        d1.style.fontFamily = "arial"
+        d1.style.border = "10px solid black"
+        isCSS = true
+    })
+
+    btn_remove.addEventListener('click', () => {
+        d1.style.backgroundColor = ""
+        d1.style.color = ""
+        d1.style.padding = ""
+        d1.style.margin = ""
+        d1.style.fontFamily = ""
+        d1.style.border = ""
+        isCSS = false
+    })
+
+
+    btn_toggle.addEventListener('click', () => {
+        if (isCSS) {
+            d1.style.backgroundColor = ""
+            d1.style.color = ""
+            d1.style.padding = ""
+            d1.style.margin = ""
+            d1.style.fontFamily = ""
+            d1.style.border = ""
+            isCSS = false
+        } else {
+            d1.style.backgroundColor = "red"
+            d1.style.color = "white"
+            d1.style.padding = "8px"
+            d1.style.margin = "8px"
+            d1.style.fontFamily = "arial"
+            d1.style.border = "10px solid black"
+            isCSS = true
+        }
+    })
+</script>
+
+</html>

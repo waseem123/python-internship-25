@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            margin: 8px;
+            padding: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="roll_no">
+    <input type="text" id="stud_name">
+    <input type="text" id="stud_city">
+    <button id="btn_add">Add</button>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="stud_table">
+
+        </tbody>
+    </table>
+</body>
+<script>
+
+    let btn_add = document.querySelector('#btn_add')
+    let stud_table = document.querySelector('#stud_table')
+    btn_add.addEventListener('click', () => {
+        let roll_no = document.querySelector('#roll_no').value
+        let stud_name = document.querySelector('#stud_name').value
+        let stud_city = document.querySelector('#stud_city').value
+
+        let tr = document.createElement('tr')
+        let td_rollno = document.createElement('td')
+        let td_name = document.createElement('td')
+        let td_city = document.createElement('td')
+
+        td_rollno.append(roll_no)
+        td_name.append(stud_name)
+        td_city.append(stud_city)
+
+        tr.appendChild(td_rollno)
+        tr.appendChild(td_name)
+        tr.appendChild(td_city)
+        stud_table.appendChild(tr)
+
+    })
+
+</script>
+
+</html>
