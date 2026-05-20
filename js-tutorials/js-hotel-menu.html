@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            border-collapse: collapse;
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="menu_category">
+        <option value="0">SELECT CATEGORY</option>
+        <option value="1">Starter</option>
+        <option value="2">Main Course</option>
+        <option value="3">Beverages</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>Dish</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="menu">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    let menu = {
+        starter: [
+            { id: 1, name: "Garlic Bruschetta", price: 6.99, veg: true },
+            { id: 2, name: "Chicken Wings", price: 9.50, veg: false },
+            { id: 3, name: "Stuffed Mushrooms", price: 7.25, veg: true }
+        ],
+        maincourse: [
+            { id: 4, name: "Grilled Salmon", price: 18.50, veg: false },
+            { id: 5, name: "Mushroom Risotto", price: 14.00, veg: true },
+            { id: 6, name: "Beef Tenderloin", price: 24.00, veg: false }
+        ],
+        beverages: [
+            { id: 7, name: "Fresh Lemonade", price: 3.50, cold: true },
+            { id: 8, name: "Iced Caramel Latte", price: 4.75, cold: true },
+            { id: 9, name: "Red Wine (Glass)", price: 8.00, cold: false }
+        ]
+    };
+
+    let menu_category_input = document.querySelector('#menu_category')
+    let menu_items = document.querySelector('#menu')
+
+    menu_category_input.addEventListener('change', () => {
+        menu_items.innerHTML = ""
+        let category = parseInt(menu_category_input.value)
+        
+        switch (category) {
+            case 1:
+                
+                // Starters
+                menu.starter.forEach(i => {
+                    let row = document.createElement('tr')
+                    let dishColumn = document.createElement('td')
+                    let priceColumn = document.createElement('td')
+                    dishColumn.append(i.name)
+                    priceColumn.append(i.price)
+                    row.append(dishColumn, priceColumn)
+                    menu_items.append(row)
+                });
+                break;
+            case 2:
+                // Main Course
+                menu.maincourse.forEach(i => {
+                    let row = document.createElement('tr')
+                    let dishColumn = document.createElement('td')
+                    let priceColumn = document.createElement('td')
+                    dishColumn.append(i.name)
+                    priceColumn.append(i.price)
+                    row.append(dishColumn, priceColumn)
+                    menu_items.append(row)
+                });
+                break;
+            case 3:
+                // Beverages
+                menu.beverages.forEach(i => {
+                    let row = document.createElement('tr')
+                    let dishColumn = document.createElement('td')
+                    let priceColumn = document.createElement('td')
+                    dishColumn.append(i.name)
+                    priceColumn.append(i.price)
+                    row.append(dishColumn, priceColumn)
+                    menu_items.append(row)
+                });
+                break;
+
+        }
+    })
+</script>
+
+</html>

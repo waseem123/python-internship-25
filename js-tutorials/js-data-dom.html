@@ -23,7 +23,9 @@
     <input type="text" id="stud_name">
     <input type="text" id="stud_city">
     <button id="btn_add">Add</button>
+
     <hr>
+
     <table>
         <thead>
             <tr>
@@ -37,15 +39,26 @@
         </tbody>
     </table>
 </body>
-<script>
 
+<script>
     let btn_add = document.querySelector('#btn_add')
     let stud_table = document.querySelector('#stud_table')
+
+    let students = []
     btn_add.addEventListener('click', () => {
         let roll_no = document.querySelector('#roll_no').value
         let stud_name = document.querySelector('#stud_name').value
         let stud_city = document.querySelector('#stud_city').value
 
+        if (roll_no.length <= 0 || stud_name.length <= 0 || stud_city.length <= 0) {
+            alert("You can not leave empty fields")
+            return
+        }
+
+        
+        let s = { rollno: roll_no, name: stud_name, city: stud_city }
+        students.push(s)
+        
         let tr = document.createElement('tr')
         let td_rollno = document.createElement('td')
         let td_name = document.createElement('td')
@@ -59,6 +72,11 @@
         tr.appendChild(td_name)
         tr.appendChild(td_city)
         stud_table.appendChild(tr)
+
+        document.querySelector('#roll_no').value = ""
+        document.querySelector('#stud_name').value = ""
+        document.querySelector('#stud_city').value = ""
+
 
     })
 
